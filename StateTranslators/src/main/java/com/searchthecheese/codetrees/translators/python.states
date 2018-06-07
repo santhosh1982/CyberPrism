@@ -1,0 +1,18 @@
+[small]::<tolower>
+[capital]::<toupper>
+[equal to]:'=':<>
+[equals to]:'=':<>
+[is equal to]:'=':<>
+[equal equal]:'==':<>
+[equals equals]:'==':<>
+[greater than]:'>':<>
+[lesser than]:'<':<>
+[greater than or]:'>':<>
+[lesser than or]:'<':<>
+[not]:'not':<>
+[not equal]:'not':<>
+[not equals]:'not':<>
+[semi]:';':<>
+[full]:'fullcolon':<>
+[enter]::<crlf>
+
