@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="231.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cyberprism.lanchat.fxcontrollers.MessageitemController">
+   <children>
+      <ImageView id="imageViewEmoji" fx:id="imageViewEmoji" fitHeight="37.0" fitWidth="34.0" layoutX="14.0" layoutY="186.0" onMouseClicked="#selectEmoji" onMouseEntered="#showEmoji" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow blurType="TWO_PASS_BOX" choke="0.28" color="#c31e1e" height="112.92" radius="52.2525" width="98.09" />
+         </effect>
+      </ImageView>
+      <HTMLEditor id="messageHTMLEditor" fx:id="messageHTMLEditor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutY="27.0" nodeOrientation="LEFT_TO_RIGHT" onContextMenuRequested="#messageContextMenuRequested" onDragDetected="#messageDragDetected" onDragDone="#messageDragDone" onDragDropped="#messageDragDroped" onDragEntered="#messageDragEntered" onDragExited="#messageDragExited" onDragOver="#messageDragOver" onKeyReleased="#messageKeyReleased" onKeyTyped="#messageKeyTyped" prefHeight="151.0" prefWidth="584.0">
+         <effect>
+            <Bloom threshold="1.0">
+               <input>
+                  <DropShadow blurType="GAUSSIAN" color="#82a61f" height="3.95" radius="1.29" spread="0.05" width="3.21">
+                     <input>
+                        <InnerShadow choke="0.27" color="#4aa85d" height="15.82" radius="5.74" width="9.14" />
+                     </input>
+                  </DropShadow>
+               </input>
+            </Bloom>
+         </effect>
+      </HTMLEditor>
+      <MenuBar id="messageMenuBar" fx:id="messageMenuBar" layoutY="2.0" nodeOrientation="LEFT_TO_RIGHT">
+        <menus>
+          <Menu mnemonicParsing="false" text="Message">
+            <items>
+              <MenuItem id="messageSaveItem" mnemonicParsing="false" onAction="#messageSave" text="Save">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem id="messageDeleteItem" mnemonicParsing="false" onAction="#messageDelete" text="Delete">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="X" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem id="messageCollapseItem" mnemonicParsing="false" onAction="#messageCollapse" text="Collapse">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="CLOSE_BRACKET" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem id="messageExpandItem" disable="true" mnemonicParsing="false" onAction="#messageExpand" text="Expand">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="OPEN_BRACKET" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem id="messageForwardItem" disable="true" mnemonicParsing="false" onAction="#messageForward" text="Forward">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="V" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+            </items>
+          </Menu>
+        </menus>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <ColorAdjust brightness="-0.19" contrast="0.19" hue="-0.21" saturation="0.26">
+               <input>
+                  <Glow level="0.16" />
+               </input>
+            </ColorAdjust>
+         </effect>
+      </MenuBar>
+      <Button id="buttonSend" fx:id="buttonSend" alignment="CENTER" defaultButton="true" layoutX="536.0" layoutY="194.0" mnemonicParsing="false" onAction="#sendClick" text="SEND" textFill="#3335c4" underline="true" />
+   </children>
+   <effect>
+      <InnerShadow choke="0.06" radius="8.5175" width="15.07" />
+   </effect>
+</Pane>

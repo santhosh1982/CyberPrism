@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TitledPane alignment="CENTER" animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="288.0" prefWidth="600.0" text="MESSAGE" textAlignment="JUSTIFY" textFill="#273897" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="com.cyberprism.lanchat.fxcontrollers.MessageboxController">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="23.0" layoutY="26.0" mouseTransparent="true" prefHeight="200.0" prefWidth="551.0">
+               <effect>
+                  <DropShadow color="#32ad94" height="106.25" radius="52.81" spread="0.15" width="106.99" />
+               </effect>
+               <center>
+                  <TextArea fx:id="txtMessage" blendMode="ADD" nodeOrientation="RIGHT_TO_LEFT" prefHeight="200.0" prefWidth="200.0" text="SAMPLE MESSAGE" wrapText="true" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Britannic Bold" size="42.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextArea>
+               </center>
+            </BorderPane>
+         </children></AnchorPane>
+  </content>
+   <font>
+      <Font name="Berlin Sans FB" size="19.0" />
+   </font>
+   <effect>
+      <DropShadow blurType="GAUSSIAN" color="#15968a" height="74.37" radius="29.2725" spread="0.13" width="44.72">
+         <input>
+            <Blend mode="DARKEN" opacity="0.74" />
+         </input>
+      </DropShadow>
+   </effect>
+</TitledPane>

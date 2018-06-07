@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TitledPane alignment="CENTER" collapsible="false" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.67" prefHeight="400.0" prefWidth="600.0" text="LOGIN" textAlignment="JUSTIFY" textOverrun="WORD_ELLIPSIS" underline="true" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cyberprism.lanchat.fxcontrollers.LoginController">
+   <font>
+      <Font name="Courier New Bold" size="24.0" />
+   </font>
+   <effect>
+      <DropShadow color="#2649bc" height="22.49" offsetX="0.4" offsetY="0.4" radius="6.6674999999999995" spread="0.52" width="6.18">
+         <input>
+            <Glow>
+               <input>
+                  <DropShadow />
+               </input>
+            </Glow>
+         </input>
+      </DropShadow>
+   </effect>
+   <content>
+      <StackPane prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="320.0" fitWidth="566.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/BlogImage_Chat.jpg" />
+                     </image>
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Blend />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane prefHeight="312.0" prefWidth="563.0">
+                     <children>
+                        <PasswordField fx:id="txtPassword" layoutX="109.0" layoutY="178.0" prefHeight="25.0" prefWidth="347.0" promptText="password">
+                           <font>
+                              <Font name="Courier New Bold" size="24.0" />
+                           </font>
+                           <effect>
+                              <Blend mode="EXCLUSION">
+                                 <topInput>
+                                    <Reflection />
+                                 </topInput>
+                              </Blend>
+                           </effect>
+                        </PasswordField>
+                        <Label layoutX="108.0" layoutY="142.0" text="PASSWORD:">
+                           <font>
+                              <Font name="Courier New Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="108.0" layoutY="42.0" text="USER NAME:">
+                           <font>
+                              <Font name="Courier New Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtUserName" layoutX="108.0" layoutY="84.0" prefHeight="25.0" prefWidth="348.0" promptText="username">
+                           <font>
+                              <Font name="Courier New Bold" size="24.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow color="#0da36c" />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                        <Button fx:id="buttonLogin" defaultButton="true" layoutX="229.0" layoutY="247.0" mnemonicParsing="false" onAction="#loginClicked" text="LOGIN">
+                           <font>
+                              <Font name="Courier New Bold" size="24.0" />
+                           </font>
+                           <effect>
+                              <Bloom threshold="0.75">
+                                 <input>
+                                    <DropShadow />
+                                 </input>
+                              </Bloom>
+                           </effect>
+                        </Button>
+                        <Button fx:id="buttonNewUser" layoutX="407.0" layoutY="249.0" mnemonicParsing="false" onAction="#newUserClicked" prefHeight="46.0" prefWidth="147.0" text="NEW USER?" textFill="#b55b5b">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <effect>
+                        <Glow level="0.32" />
+                     </effect>
+                  </AnchorPane>
+               </children>
+               <effect>
+                  <Blend mode="SOFT_LIGHT" opacity="0.86">
+                     <topInput>
+                        <BoxBlur height="40.58" iterations="2" width="85.06">
+                           <input>
+                              <Glow level="0.71" />
+                           </input>
+                        </BoxBlur>
+                     </topInput>
+                  </Blend>
+               </effect>
+            </Pane>
+         </children>
+      </StackPane>
+   </content>
+   <textFill>
+      <RadialGradient centerX="0.5277777777777778" centerY="0.8285714285714285" radius="0.5">
+         <stops>
+            <Stop color="#5055ad" />
+            <Stop color="#5056ad" offset="0.4904609550894656" />
+            <Stop color="#859789" offset="1.0" />
+         </stops>
+      </RadialGradient>
+   </textFill>
+</TitledPane>
